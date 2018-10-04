@@ -68,11 +68,19 @@ ${LIB}/ecis-partyidentified-service-1.1.0-SNAPSHOT.jar:\
 ${LIB}/ecis-system-service-1.1.0-SNAPSHOT.jar:\
 ${LIB}/ecis-ehr-service-1.1.0-SNAPSHOT.jar:\
 ${LIB}/ecis-vehr-service-1.1.0-SNAPSHOT.jar:\
+${LIB}/ecis-query-service-1.0.0-SNAPSHOT.jar:\
+${LIB}/ecis-graphql-service-0.1-SNAPSHOT.jar:\
+${LIB}/ecis-opt-introspect-1.0-SNAPSHOT.jar:\
 ${APPLIB}/ehrxml.jar:\
 ${APPLIB}/oet-parser.jar:\
 ${APPLIB}/ecis-openehr.jar:\
 ${APPLIB}/types.jar:\
-${APPLIB}/adl-parser-1.0.9.jar
+${APPLIB}/adl-parser-1.0.9.jar:\
+${APPLIB}/CompositionTemplate.jar:\
+${APPLIB}/openEHR.v1.Template.jar:\
+${APPLIB}/composition_xml.jar:\
+${APPLIB}/openEHR.v1.OperationalTemplate.jar:\
+${APPLIB}/thinkehr-framework-jsonlib-2.3.0-JL32.jar
 
 # launch server
 # ecis server is run as user ethercis
@@ -97,6 +105,7 @@ case "$1" in
 	-Djava.awt.headless=true \
 	-Djdbc.drivers=org.postgresql.Driver \
     	-Dserver.node.name=vm01.ethercis.org \
+	-Dfile.encoding=UTF-8 \
 	-Dcom.sun.management.jmxremote \
 	-Dcom.sun.management.jmxremote.port=8999 \
     	-Dcom.sun.management.jmxremote.local.only=false \
