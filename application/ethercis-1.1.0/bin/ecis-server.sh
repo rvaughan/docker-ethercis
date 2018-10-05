@@ -53,18 +53,20 @@ export JOOQ_DB_PASSWORD=postgres
 
 CLASSPATH=./:\
 ${JAVA_HOME}/lib:\
-${LIB}/ecis-core-1.1.0-SNAPSHOT.jar:\
+${LIB}/ecis-core-1.1.1-SNAPSHOT.jar:\
 ${LIB}/ecis-knowledge-cache-1.1.0-SNAPSHOT.jar:\
 ${LIB}/ecis-ehrdao-1.1.0-SNAPSHOT.jar:\
 ${LIB}/jooq-pg-1.1.0-SNAPSHOT.jar:\
 ${LIB}/aql-processor-1.1.0-SNAPSHOT.jar:\
+${LIB}/ecis-validation-1.1.0-SNAPSHOT.jar:\
+${LIB}/ecis-transform-1.1.0-SNAPSHOT.jar:\
 ${LIB}/ecis-servicemanager-1.1.0-SNAPSHOT.jar:\
 ${LIB}/ecis-authenticate-service-1.1.0-SNAPSHOT.jar:\
 ${LIB}/ecis-knowledge-service-1.1.0-SNAPSHOT.jar:\
 ${LIB}/ecis-logon-service-1.1.0-SNAPSHOT.jar:\
 ${LIB}/ecis-resource-access-service-1.1.0-SNAPSHOT.jar:\
 ${LIB}/ecis-composition-service-1.1.0-SNAPSHOT.jar:\
-${LIB}/ecis-partyidentified-service-1.1.0-SNAPSHOT.jar:\
+${LIB}/ecis-party-identified-service-1.1.0-SNAPSHOT.jar:\
 ${LIB}/ecis-system-service-1.1.0-SNAPSHOT.jar:\
 ${LIB}/ecis-ehr-service-1.1.0-SNAPSHOT.jar:\
 ${LIB}/ecis-vehr-service-1.1.0-SNAPSHOT.jar:\
@@ -106,11 +108,6 @@ case "$1" in
 	-Djdbc.drivers=org.postgresql.Driver \
     	-Dserver.node.name=vm01.ethercis.org \
 	-Dfile.encoding=UTF-8 \
-	-Dcom.sun.management.jmxremote \
-	-Dcom.sun.management.jmxremote.port=8999 \
-    	-Dcom.sun.management.jmxremote.local.only=false \
-	-Dcom.sun.management.jmxremote.ssl=false \
-	-Dcom.sun.management.jmxremote.authenticate=false \
     	-Dfile.encoding=UTF-8 \
     	-Djava.rmi.server.hostname=${SERVER_HOST} \
 	-Djooq.dialect=${JOOQ_DIALECT} \
