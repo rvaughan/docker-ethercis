@@ -2,7 +2,7 @@ FROM java:8-jre
 
 MAINTAINER Alessandro Fael Garcia <alessfg@hotmail.com>
 
-LABEL EtherCIS-Version="1.1.0" \
+LABEL EtherCIS-Version="1.1.1" \
       Description="Docker image for the EtherCIS application"
 
 # Create user and group ethercis
