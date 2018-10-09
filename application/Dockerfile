@@ -21,6 +21,8 @@ RUN chown -R ethercis:ethercis /home/ethercis/logs \
   && chown -R ethercis:ethercis /etc/opt/ecis/knowledge \
   && chown -R ethercis:ethercis /var/opt/ecis
 
+COPY ./ethercis-1.1.0/conf/knowledge/operational_templates /etc/opt/ecis/knowledge/operational_templates
+
 # Copy EtherCIS files into their corresponding directories
 COPY ./ethercis-1.1.0/conf /etc/opt/ecis
 COPY ./ethercis-1.1.0/bin /opt/ecis/bin
